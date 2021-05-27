@@ -3,9 +3,12 @@
 This is Simple Activity that showing Faculty data from Array Object and Showing in table, also develop click functionality to showing specific location and qalification of facullty
 
 Output 1 - 
-![alt text]
+
+![alt text](https://github.com/urvashi-bhatt/angular-third-activity-ass-urvashi-bhatt/blob/master/src/assets/output-1.PNG)
+
 Output 2 - 
-![alt text]
+
+![alt text](https://github.com/urvashi-bhatt/angular-third-activity-ass-urvashi-bhatt/blob/master/src/assets/output-2.PNG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
