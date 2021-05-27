@@ -1,0 +1,71 @@
+
+<div class="container text-center mt-2">
+  <div class="row">
+    <div class="com-md-12">
+      <div class="title">
+          <h1>Faculty Information</h1>
+      </div>
+      <div class="main-wrapper mt-5">
+        <table class="table">
+          <thead>
+            <th>Id</th>
+            <th>Faculty Name</th>
+            <th>Mobile No.</th>
+            <th>Email Id</th>
+            <th>Highest Qualification</th>
+            <th>Work Location</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of myArr">
+              <td>{{item.facultyId}}</td>
+              <td>{{item.facultyName}}</td>
+              <td>{{item.facultyMobile}}</td>
+              <td>{{item.facultyEmail}}</td>
+              <td>{{item.highestQualification}}</td>
+              <td>{{item.workLocation}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="buttonswrapper mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <button class="col-md-12 col-12 btn btn-primary" (click)="showbanglore()">Show Banglore Location Faculty</button>
+    
+            <div class="mt-3" *ngIf="showbang; else showMsgBang">
+              <div class="" *ngFor="let bang of myArr">
+                <p *ngIf="bang.workLocation === 'Banglore'">{{bang.facultyId}} - {{bang.facultyName}}</p>
+              </div>
+            </div>
+            <ng-template #showMsgBang>
+              <div class="mt-3 mb-3 text-success"><strong>Click Above Button to show Banglore Location Faculty Name</strong></div>
+            </ng-template>
+          </div>
+          <div class="col-md-4">
+            <button class="col-md-12 col-12 btn btn-primary" (click)="showMysure()">Show Mysore Location Faculty</button>
+    
+            <div class="mt-3" *ngIf="showmysore; else showMsgMay">
+              <div class="" *ngFor="let mysore of myArr">
+                <p *ngIf="mysore.workLocation === 'Mysore'">{{mysore.facultyId}} - {{mysore.facultyName}}</p>
+              </div>
+            </div>
+            <ng-template #showMsgMay>
+              <div class="mt-3 mb-3 text-success"><strong>Click Above Button to show Mysore Location Faculty Name</strong></div>
+            </ng-template>
+          </div>
+          <div class="col-md-4">
+            <button class="col-md-12 col-12 btn btn-primary" (click)="showPhd()">Show PHD Faculty</button>
+            <div class="mt-3" *ngIf="showphd; else showMsgPhd">
+              <div class="" *ngFor="let phpfaculty of myArr">
+                <p *ngIf="phpfaculty.highestQualification === 'Dr'"> {{phpfaculty.facultyId}} - {{phpfaculty.facultyName}}</p>
+              </div>
+            </div>
+            <ng-template #showMsgPhd>
+              <div class="mt-3 mb-3 text-success"><strong>Click Above Button to show PHD Faculty Name</strong></div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
